@@ -1,0 +1,61 @@
+$ui-headings: (
+    null: (
+        1:(
+            m: 0,
+            p: null,
+            fs: 2.6rem,
+            lh: 1.2,
+            ff: $ui-ff-display,
+            fw: 700,
+        ),
+        2:(
+            m: 0,
+            p: null,
+            fs: 2.2rem,
+            lh: 1.25,
+            ff: $ui-ff-display,
+            fw: 700,
+        ),
+        3:(
+            m: 0,
+            p: null,
+            fs: 1.6rem,
+            lh: 1.333,
+            ff: $ui-ff-display,
+            fw: 700,
+        ),
+        4:(
+            m: 0,
+            p: null,
+            fs: 1.4rem,
+            lh: 1.375,
+            ff: $ui-ff-display,
+            fw: 700,
+        ),
+        5:(
+            m: 0,
+            p: null,
+            fs: 1.4rem,
+            lh: 1.2,
+            ff: $ui-ff-display,
+            fw: $ui-fw-bold,
+        ),
+    ),
+    $ui-global-breakpoint: (
+        1:(
+            fs: 3rem,
+        ),
+        2:(
+            fs: 2.4rem,
+        ),
+        3:(
+            fs: 1.8rem,
+        ),
+        4:(
+            fs: 1.6rem,
+        ),
+        5:(
+            fs: 1.6rem,
+        ),
+    )
+) !default;

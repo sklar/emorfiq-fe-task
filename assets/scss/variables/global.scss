@@ -1,0 +1,132 @@
+// Breakpoints
+$grid-breakpoints: (
+    0: 0,
+    xs: 360px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1460px,
+    hd: 1920px,
+) !default;
+
+// Switch from mobile to desktop view
+$ui-global-breakpoint: lg !default;
+
+// Global spacing
+$spacer-0: 5px !default;
+$spacer-1: 10px !default;
+$spacer-2: 15px !default;
+$spacer-3: 20px !default;
+$spacer-4: 30px !default;
+$spacer-5: 40px !default;
+$spacer-6: 60px !default;
+$spacer-7: 90px !default;
+
+$spacers: (
+    'none': 0,
+    0: $spacer-0,
+    1: $spacer-1,
+    2: $spacer-2,
+    3: $spacer-3,
+    4: $spacer-4,
+    5: $spacer-5,
+    6: $spacer-6,
+    7: $spacer-7,
+) !default;
+
+$spacers--negative: (
+    4: $spacer-4,
+) !default;
+
+// Project spacing
+$projectSpacers: (0, 10, 25) !default;
+$projectSpacers--negative: () !default;
+
+// Display helpers
+$h-display:
+    'none' 'none',
+    'inline' inline,
+    'inlineBlock' inline-block,
+    'block' block,
+    'table' table,
+    'flex' flex,
+    'inlineFlex' inline-flex,
+!default;
+
+// Position helpers
+$h-positions: relative, absolute !default;
+
+// z-index helpers
+$h-zIndex: (
+    0: 0,
+    1: 10,
+    2: 20,
+) !default;
+
+// Default UI spacing (grid gutter, container gutter etc.)
+$ui-default-spacing: $spacer-3 !default;
+
+// Font Families
+$ui-ff-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !default;
+$ui-ff-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$ui-ff-base: var(--ff-base), $ui-ff-sans !default;
+$ui-ff-display: var(--ff-display), $ui-ff-sans !default;
+
+$ui-global-ff-base: 'Montserrat' !default;
+$ui-global-ff-display: 'Ubuntu' !default;
+
+// Fonts-weight
+$ui-fw-bold: 500 !default;
+$ui-fw-bolder: 600 !default;
+
+// Font sizes in rem
+// generate css custom properties
+// --fs-500 etc
+$ui-global-fs: () !default;
+$ui-fs: map-extend((
+    2600: 5.6rem,
+    2200: 4.8rem,
+    1300: 3rem,
+    1000: 2.4rem,
+    800: 2rem,
+    700: 1.8rem,
+    600: 1.6rem,
+    500: 1.4rem,
+    400: 1.2rem,
+    300: 1rem,
+), $ui-global-fs) !default;
+
+// Globals
+// =====
+$ui-global-font-size: var(--fs-500) !default;
+$ui-global-font-family: $ui-ff-base !default;
+$ui-global-font-weight: 400 !default;
+$ui-global-bold-font-weight: 700 !default;
+$ui-global-letter-spacing: 0 !default;
+$ui-global-line-height: 1.5 !default;
+
+// Disabled
+$ui-global-disabled-cursor: not-allowed !default;
+
+// Size
+$ui-global-min-width: 320px !default;
+
+// Colors
+$ui-global-background: $ui-color-white !default;
+$ui-global-text-color: $ui-color-gray-500 !default;
+$ui-global-text-color-l: $ui-color-gray-400 !default;
+
+// Links
+$ui-global-link-color: $ui-global-text-color !default;
+$ui-global-link-decoration: underline !default;
+$ui-global-link-color-hover: $ui-global-text-color !default;
+$ui-global-link-decoration-hover: none !default;
+
+// Border
+$ui-global-border-color: $ui-color-gray-200 !default;
+$ui-global-border-color-light: $ui-color-gray-100 !default;
+$ui-global-border-color-active: $ui-color-gray-400 !default;
+$ui-global-border-color-light-active: $ui-color-gray-300 !default;
+$ui-global-border-width: 1px !default;
+$ui-global-border-radius: 2px !default;

@@ -1,0 +1,294 @@
+// Common
+$product-card-breakpoint: $ui-global-breakpoint !default;
+$product-card-background-color: $ui-global-background !default;
+$product-card-hover-image-scale: 1.25 !default;
+$product-card-hover-title-decoration: underline !default;
+
+$product-card__mobile-margin: none !default;
+$product-card__mobile-padding: 0 0 $spacer-1 !default;
+$product-card__mobile-border-width: 0 0 1px !default;
+$product-card__mobile-border-color: $ui-global-border-color-light !default;
+$product-card__mobile-border-radius: null !default;
+$product-card__mobile-border-hover-color: $ui-color-primary-100 !default;
+
+$product-card__desktop-margin: $product-card__mobile-margin !default;
+$product-card__desktop-padding: 0 0 $spacer-2 !default;
+$product-card__desktop-border-width: $product-card__mobile-border-width !default;
+$product-card__desktop-border-color: $product-card__mobile-border-color !default;
+$product-card__desktop-border-radius: $product-card__mobile-border-radius !default;
+$product-card__desktop-border-hover-color: $product-card__mobile-border-hover-color !default;
+
+// Header
+$product-card-header-background-color: none !default;
+
+$product-card__mobile-header-margin: none !default;
+$product-card__mobile-header-padding: none !default;
+$product-card__mobile-header-height: 138px !default;
+
+$product-card__desktop-header-margin: $product-card__mobile-header-margin !default;
+$product-card__desktop-header-padding: $product-card__mobile-header-padding !default;
+$product-card__desktop-header-height: 280px !default;
+
+// Body
+$product-card-body-background-color: none !default;
+
+$product-card__mobile-body-margin: none !default;
+$product-card__mobile-body-padding: $spacer-1 0 $spacer-0 !default;
+
+$product-card__desktop-body-margin: $product-card__mobile-body-margin !default;
+$product-card__desktop-body-padding: $spacer-1 0 !default;
+
+// Footer
+$product-card-footer-background-color: none !default;
+
+$product-card__mobile-footer-margin: none !default;
+$product-card__mobile-footer-padding: 12px 0 0 !default;
+$product-card__mobile-footer-height: none !default;
+
+$product-card__desktop-footer-margin: $product-card__mobile-footer-margin !default;
+$product-card__desktop-footer-padding: $product-card__mobile-footer-padding !default;
+$product-card__desktop-footer-height: $product-card__mobile-footer-height !default;
+
+// Footer content
+$product-card__desktop-footer-content__mobile-display: nones !default;
+$product-card__desktop-footer-content__mobile-flex-flow: none !default;
+$product-card__desktop-footer-content__mobile-gap: none !default;
+$product-card__desktop-footer-content__mobile-place-content: none !default;
+$product-card__desktop-footer-content__mobile-place-items: none !default;
+
+$product-card__desktop-footer-content__desktop-display: flex !default;
+$product-card__desktop-footer-content__desktop-flex-flow: $product-card__desktop-footer-content__mobile-flex-flow !default;
+$product-card__desktop-footer-content__desktop-gap: $product-card__desktop-footer-content__mobile-gap !default;
+$product-card__desktop-footer-content__desktop-place-content: space-between !default;
+$product-card__desktop-footer-content__desktop-place-items: $product-card__desktop-footer-content__mobile-place-items !default;
+
+// priceWrapper
+$product-card__mobile-price-wrapper-margin: none !default;
+$product-card__mobile-price-wrapper-padding: 0 0 8px !default;
+$product-card__mobile-price-wrapper-height: 48px !default;
+$product-card__mobile-price-wrapper-align-self: center !default;
+
+$product-card__desktop-price-wrapper-margin: $product-card__mobile-price-wrapper-margin !default;
+$product-card__desktop-price-wrapper-padding: 0 !default;
+$product-card__desktop-price-wrapper-height: 40px !default;
+$product-card__desktop-price-wrapper-align-self: $product-card__mobile-price-wrapper-align-self !default;
+
+// Loyalty price
+$product-card__mobile-loyalty-price-margin: 8px 0 0 !default;
+$product-card__mobile-loyalty-price-padding: none !default;
+
+$product-card__desktop-loyalty-price-margin: $product-card__mobile-loyalty-price-margin !default;
+$product-card__desktop-loyalty-price-padding: $product-card__mobile-loyalty-price-padding !default;
+
+// Loyalty price title
+$product-card__mobile-loyalty-price-title-margin: none !default;
+$product-card__mobile-loyalty-price-title-padding: none !default;
+$product-card__mobile-loyalty-price-title-font-family: none !default;
+$product-card__mobile-loyalty-price-title-font-size: none !default;
+$product-card__mobile-loyalty-price-title-line-height: none !default;
+$product-card__mobile-loyalty-price-title-font-weight: none !default;
+$product-card__mobile-loyalty-price-title-color: none !default;
+
+$product-card__desktop-loyalty-price-title-margin: $product-card__mobile-loyalty-price-title-margin !default;
+$product-card__desktop-loyalty-price-title-padding: $product-card__mobile-loyalty-price-title-padding !default;
+$product-card__desktop-loyalty-price-title-font-family: $product-card__mobile-loyalty-price-title-font-family !default;
+$product-card__desktop-loyalty-price-title-font-size: $product-card__mobile-loyalty-price-title-font-size !default;
+$product-card__desktop-loyalty-price-title-line-height: $product-card__mobile-loyalty-price-title-line-height !default;
+$product-card__desktop-loyalty-price-title-font-weight: $product-card__mobile-loyalty-price-title-font-weight !default;
+$product-card__desktop-loyalty-price-title-color: $product-card__mobile-loyalty-price-title-color !default;
+
+// Loyalty price value
+$product-card__mobile-loyalty-price-value-margin: none !default;
+$product-card__mobile-loyalty-price-value-padding: none !default;
+$product-card__mobile-loyalty-price-value-font-family: none !default;
+$product-card__mobile-loyalty-price-value-font-size: none !default;
+$product-card__mobile-loyalty-price-value-line-height: none !default;
+$product-card__mobile-loyalty-price-value-font-weight: $ui-fw-bolder !default;
+$product-card__mobile-loyalty-price-value-color: none !default;
+
+$product-card__desktop-loyalty-price-value-margin: $product-card__mobile-loyalty-price-value-margin !default;
+$product-card__desktop-loyalty-price-value-padding: $product-card__mobile-loyalty-price-value-padding !default;
+$product-card__desktop-loyalty-price-value-font-family: $product-card__mobile-loyalty-price-value-font-family !default;
+$product-card__desktop-loyalty-price-value-font-size: $product-card__mobile-loyalty-price-value-font-size !default;
+$product-card__desktop-loyalty-price-value-line-height: $product-card__mobile-loyalty-price-value-line-height !default;
+$product-card__desktop-loyalty-price-value-font-weight: $product-card__mobile-loyalty-price-value-font-weight !default;
+$product-card__desktop-loyalty-price-value-color: $product-card__mobile-loyalty-price-value-color !default;
+
+// Quantity
+$product-card__mobile-footer-quantity-min-height: 55px !default;
+$product-card__mobile-footer-quantity-max-width: 150px !default;
+
+$product-card__desktop-footer-quantity-min-height: $product-card__mobile-footer-quantity-min-height !default;
+
+// Badges
+$product-card__badges_positions: (
+    // name
+    primary: (
+        0: (// breakpoint
+            position: absolute,
+            inset: 0 auto auto 0,
+            display: flex,
+            flex-flow: row wrap,
+            gap: 8px,
+        ),
+    ),
+    secondary: (
+        0: (
+            margin: 0 0 10px 0,
+            display: flex,
+            flex-flow: row wrap,
+            gap: 4px,
+        )
+    ),
+    tertiary: (
+        0: (
+            position: absolute,
+            inset: auto auto 16px 0,
+            display: flex,
+            flex-flow: column,
+            align-items: flex-start,
+            gap: 4px,
+        )
+    ),
+) !default;
+
+// Like
+$product-card__mobile-like-inset: auto 20px 20px auto !default;
+$product-card__desktop-like-inset: auto 20px 20px auto !default;
+
+// Like icon
+$product-card__mobile-like-icon-width: 28px !default;
+$product-card__mobile-like-icon-height: auto !default;
+
+$product-card__desktop-like-icon-width: 32px !default;
+$product-card__desktop-like-icon-height: auto !default;
+
+// Btn
+$product-card__mobile-btn-margin: none !default;
+$product-card__mobile-btn-padding: none !default;
+
+$product-card__desktop-btn-margin: $product-card__mobile-btn-margin !default;
+$product-card__desktop-btn-padding: $product-card__mobile-btn-padding !default;
+
+// Image
+$product-card__mobile-image-margin: none !default;
+$product-card__mobile-image-padding: none !default;
+$product-card__mobile-image-display: block !default;
+$product-card__mobile-image-width: 100% !default;
+$product-card__mobile-image-height: auto !default;
+$product-card__mobile-image-max-width: nones !default;
+$product-card__mobile-image-max-height: 100% !default;
+$product-card__mobile-image-object-fit: contain !default;
+
+$product-card__desktop-image-margin: $product-card__mobile-image-margin !default;
+$product-card__desktop-image-padding: $product-card__mobile-image-padding !default;
+$product-card__desktop-image-display: $product-card__mobile-image-display !default;
+$product-card__desktop-image-width: $product-card__mobile-image-width !default;
+$product-card__desktop-image-height: $product-card__mobile-image-height !default;
+$product-card__desktop-image-max-width: $product-card__mobile-image-max-width !default;
+$product-card__desktop-image-max-height: $product-card__mobile-image-max-height !default;
+$product-card__desktop-image-object-fit: $product-card__mobile-image-object-fit !default;
+
+// Price
+$product-card__mobile-price-margin: none !default;
+$product-card__mobile-price-padding: none !default;
+$product-card__mobile-price-font-family: none !default;
+$product-card__mobile-price-font-size: var(--fs-600) !default;
+$product-card__mobile-price-line-height: 1.312 !default;
+$product-card__mobile-price-font-weight: $ui-fw-bolder !default;
+$product-card__mobile-price-color: none !default;
+
+$product-card__desktop-price-margin: $product-card__mobile-price-margin !default;
+$product-card__desktop-price-padding: $product-card__mobile-price-padding !default;
+$product-card__desktop-price-font-family: $product-card__mobile-price-font-family !default;
+$product-card__desktop-price-font-size: $product-card__mobile-price-font-size !default;
+$product-card__desktop-price-line-height: $product-card__mobile-price-line-height !default;
+$product-card__desktop-price-font-weight: $product-card__mobile-price-font-weight !default;
+$product-card__desktop-price-color: $product-card__mobile-price-color !default;
+
+// PriceOld
+$product-card__mobile-price-old-margin: 0 0 4px !default;
+$product-card__mobile-price-old-padding: none !default;
+$product-card__mobile-price-old-font-family: none !default;
+$product-card__mobile-price-old-font-size: var(--fs-400) !default;
+$product-card__mobile-price-old-line-height: 1.333 !default;
+$product-card__mobile-price-old-font-weight: none !default;
+$product-card__mobile-price-old-color: $ui-color-gray-400 !default;
+
+$product-card__desktop-price-old-margin: 0 0 3px !default;
+$product-card__desktop-price-old-padding: $product-card__mobile-price-old-padding !default;
+$product-card__desktop-price-old-font-family: $product-card__mobile-price-old-font-family !default;
+$product-card__desktop-price-old-font-size: $product-card__mobile-price-old-font-size !default;
+$product-card__desktop-price-old-line-height: $product-card__mobile-price-old-line-height !default;
+$product-card__desktop-price-old-font-weight: $product-card__mobile-price-old-font-weight !default;
+$product-card__desktop-price-old-color: $product-card__mobile-price-old-color !default;
+
+// Stock
+$product-card__mobile-stock-margin: $spacer-1 0 0 !default;
+$product-card__mobile-stock-padding: none !default;
+$product-card__mobile-stock-font-family: none !default;
+$product-card__mobile-stock-font-size: var(--fs-400) !default;
+$product-card__mobile-stock-line-height: 1.25 !default;
+$product-card__mobile-stock-font-weight: $ui-fw-bold !default;
+$product-card__mobile-stock-color: none !default;
+
+$product-card__desktop-stock-margin: $product-card__mobile-stock-margin !default;
+$product-card__desktop-stock-padding: $product-card__mobile-stock-padding !default;
+$product-card__desktop-stock-font-family: $product-card__mobile-stock-font-family !default;
+$product-card__desktop-stock-font-size: $product-card__mobile-stock-font-size !default;
+$product-card__desktop-stock-line-height: $product-card__mobile-stock-line-height !default;
+$product-card__desktop-stock-font-weight: $product-card__mobile-stock-font-weight !default;
+$product-card__desktop-stock-color: $product-card__mobile-stock-color !default;
+
+// Title
+$product-card__mobile-title-margin: none !default;
+$product-card__mobile-title-padding: none !default;
+$product-card__mobile-title-font-family: none !default;
+$product-card__mobile-title-font-size: var(--fs-500) !default;
+$product-card__mobile-title-line-height: 1.357 !default;
+$product-card__mobile-title-font-weight: $ui-fw-bold !default;
+$product-card__mobile-title-color: none !default;
+
+$product-card__desktop-title-margin: $product-card__mobile-title-margin !default;
+$product-card__desktop-title-padding: $product-card__mobile-title-padding !default;
+$product-card__desktop-title-font-family: $product-card__mobile-title-font-family !default;
+$product-card__desktop-title-font-size: $product-card__mobile-title-font-size !default;
+$product-card__desktop-title-line-height: $product-card__mobile-title-line-height !default;
+$product-card__desktop-title-font-weight: $product-card__mobile-title-font-weight !default;
+$product-card__desktop-title-color: $product-card__mobile-title-color !default;
+
+// Code
+$product-card__mobile-code-margin: $spacer-1 0 0 !default;
+$product-card__mobile-code-padding: none !default;
+$product-card__mobile-code-font-family: none !default;
+$product-card__mobile-code-font-size: var(--fs-400) !default;
+$product-card__mobile-code-line-height: none !default;
+$product-card__mobile-code-font-weight: $ui-fw-bold !default;
+$product-card__mobile-code-color: $ui-color-gray-300 !default;
+
+$product-card__desktop-code-margin: $product-card__mobile-code-margin !default;
+$product-card__desktop-code-padding: $product-card__mobile-code-padding !default;
+$product-card__desktop-code-font-family: $product-card__mobile-code-font-family !default;
+$product-card__desktop-code-font-size: $product-card__mobile-code-font-size !default;
+$product-card__desktop-code-line-height: $product-card__mobile-code-line-height !default;
+$product-card__desktop-code-font-weight: $product-card__mobile-code-font-weight !default;
+$product-card__desktop-code-color: $product-card__mobile-code-color !default;
+
+// PriceHistory
+$productCard-priceHistory__mobile-margin: none !default;
+$productCard-priceHistory__mobile-padding: none !default;
+$productCard-priceHistory__mobile-fontFamily: none !default;
+$productCard-priceHistory__mobile-fontSize: var(--fs-300) !default;
+$productCard-priceHistory__mobile-lineHeight: none !default;
+$productCard-priceHistory__mobile-fontWeight: none !default;
+$productCard-priceHistory__mobile-textAlign: none !default;
+$productCard-priceHistory__mobile-color: none !default;
+
+$productCard-priceHistory__desktop-margin: $productCard-priceHistory__mobile-margin !default;
+$productCard-priceHistory__desktop-padding: $productCard-priceHistory__mobile-padding !default;
+$productCard-priceHistory__desktop-fontFamily: $productCard-priceHistory__mobile-fontFamily !default;
+$productCard-priceHistory__desktop-fontSize: $productCard-priceHistory__mobile-fontSize !default;
+$productCard-priceHistory__desktop-lineHeight: $productCard-priceHistory__mobile-lineHeight !default;
+$productCard-priceHistory__desktop-fontWeight: $productCard-priceHistory__mobile-fontWeight !default;
+$productCard-priceHistory__desktop-textAlign: $productCard-priceHistory__mobile-textAlign !default;
+$productCard-priceHistory__desktop-color: $productCard-priceHistory__mobile-color !default;

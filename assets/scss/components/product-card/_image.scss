@@ -1,0 +1,54 @@
+.ProductCard-image {
+    @include change-value(margin, $product-card__mobile-image-margin, none);
+    @include change-value(padding, $product-card__mobile-image-padding, none);
+    @include change-value(display, $product-card__mobile-image-display, nones);
+    @include change-value(width, $product-card__mobile-image-width, none);
+    @include change-value(height, $product-card__mobile-image-height, none);
+    @include change-value(max-width, $product-card__mobile-image-max-width, nones);
+    @include change-value(max-height, $product-card__mobile-image-max-height, nones);
+    @include change-value(object-fit, $product-card__mobile-image-object-fit, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-image {
+        @include change-value(margin, $product-card__desktop-image-margin, $product-card__mobile-image-margin);
+        @include change-value(padding, $product-card__desktop-image-padding, $product-card__mobile-image-padding);
+        @include change-value(display, $product-card__desktop-image-display, $product-card__mobile-image-display);
+        @include change-value(width, $product-card__desktop-image-width, $product-card__mobile-image-width);
+        @include change-value(height, $product-card__desktop-image-height, $product-card__mobile-image-height);
+        @include change-value(max-width, $product-card__desktop-image-max-width, $product-card__mobile-image-max-width);
+        @include change-value(max-height, $product-card__desktop-image-max-height, $product-card__mobile-image-max-height);
+        @include change-value(object-fit, $product-card__desktop-image-object-fit, $product-card__mobile-image-object-fit);
+    }
+}
+
+@if ($product-card-hover-image-scale) {
+    .ProductCard:not(.ProductCard--withSecondaryImage) {
+        &:hover, &:focus, &:focus-within {
+            .ProductCard-image {
+                transform: scale($product-card-hover-image-scale);
+            }
+        }
+
+        .ProductCard-image {
+            @include transition(transform);
+        }
+    }
+}
+
+// show secondary image on hover
+.ProductCard--withSecondaryImage {
+    .ProductCard-image--secondary {
+        display: none;
+    }
+
+    &:hover, &:focus, &:focus-within {
+        .ProductCard-image--secondary {
+            display: block;
+        }
+
+        .ProductCard-image--primary {
+            display: none;
+        }
+    }
+}

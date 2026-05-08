@@ -1,0 +1,18 @@
+.ProductCard-body {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    @include change-value(background-color, $product-card-body-background-color, none);
+    @include change-value(margin, $product-card__mobile-body-margin, none);
+    @include change-value(padding, $product-card__mobile-body-padding, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-body {
+        @include change-value(margin, $product-card__desktop-body-margin, $product-card__mobile-body-margin);
+        @include change-value(padding, $product-card__desktop-body-padding, $product-card__mobile-body-padding);
+    }
+}

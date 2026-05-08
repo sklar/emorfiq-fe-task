@@ -1,0 +1,19 @@
+@import "variables";
+
+@layer components.ui {
+h1, h2, h3, h4, h5,
+.Heading--h1,
+.Heading--h2,
+.Heading--h3,
+.Heading--h4,
+.Heading--h5 {
+    margin: var(--heading-m);
+    padding: var(--heading-p);
+    font-family: var(--heading-ff);
+    font-weight: var(--heading-fw);
+    font-size: var(--heading-fs);
+    line-height: var(--heading-lh);
+}
+
+@include headings($ui-headings);
+}

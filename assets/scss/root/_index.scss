@@ -1,0 +1,12 @@
+@layer settings.ui {
+    :root {
+        // Create fontSize custom properties
+        @each $size, $value in $ui-fs {
+            --fs-#{$size}: #{$value};
+        }
+
+        // add fontFamily custom properties
+        --ff-base: "#{$ui-global-ff-base}";
+        --ff-display: "#{$ui-global-ff-display}";
+    }
+}

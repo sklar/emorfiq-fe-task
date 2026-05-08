@@ -1,0 +1,22 @@
+// Sets headings custom properties
+@mixin headings($headings){
+    // Create headings custom properties
+    @each $breakpoint, $sizes in $headings {
+        // foreach breakpoints
+        @include media-breakpoint-up($breakpoint) {
+            // foreach sizes
+            @each $size, $values in $sizes {
+                h#{$size},
+                .Heading--h#{$size} {
+                    // foreach properties
+                    @each $property, $value in $values {
+                        // if value is not null
+                        @if($value) {
+                            --heading-#{$property}: #{$value};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

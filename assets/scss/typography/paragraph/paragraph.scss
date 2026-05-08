@@ -1,0 +1,29 @@
+@import "variables";
+
+@layer components.ui {
+p {
+    @include change-value(margin, $ui-paragraph__mobile-margin, none);
+    @include change-value(padding, $ui-paragraph__mobile-padding, none);
+    @include change-value(font-family, $ui-paragraph__mobile-font-family, none);
+    @include change-value(font-size, $ui-paragraph__mobile-font-size, none);
+    @include change-value(font-weight, $ui-paragraph__mobile-font-weight, none);
+    @include change-value(line-height, $ui-paragraph__mobile-line-height, none);
+
+    @if ($ui-paragraph-reset-last) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up($ui-paragraph-breakpoint) {
+    p {
+        @include change-value(margin, $ui-paragraph__desktop-margin, $ui-paragraph__mobile-margin);
+        @include change-value(padding, $ui-paragraph__desktop-padding, $ui-paragraph__mobile-padding);
+        @include change-value(font-family, $ui-paragraph__desktop-font-family, $ui-paragraph__mobile-font-family);
+        @include change-value(font-size, $ui-paragraph__desktop-font-size, $ui-paragraph__mobile-font-size);
+        @include change-value(font-weight, $ui-paragraph__desktop-font-weight, $ui-paragraph__mobile-font-weight);
+        @include change-value(line-height, $ui-paragraph__desktop-line-height, $ui-paragraph__mobile-line-height);
+    }
+}
+}

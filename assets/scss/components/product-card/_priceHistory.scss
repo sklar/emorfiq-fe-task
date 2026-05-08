@@ -1,0 +1,28 @@
+@import "variables";
+
+@layer components.eshop {
+    .ProductCardPriceHistory {
+        @include change-value(margin, $productCard-priceHistory__mobile-margin, none);
+        @include change-value(padding, $productCard-priceHistory__mobile-padding, none);
+        @include change-value(font-family, $productCard-priceHistory__mobile-fontFamily, none);
+        @include change-value(font-size, $productCard-priceHistory__mobile-fontSize, none);
+        @include change-value(line-height, $productCard-priceHistory__mobile-lineHeight, none);
+        @include change-value(font-weight, $productCard-priceHistory__mobile-fontWeight, none);
+        @include change-value(text-align, $productCard-priceHistory__mobile-textAlign, none);
+        @include change-value(color, $productCard-priceHistory__mobile-color, none);
+    }
+
+    @include media-breakpoint-up($product-card-breakpoint) {
+        .ProductCardPriceHistory {
+            @include change-value(margin, $productCard-priceHistory__desktop-margin, $productCard-priceHistory__mobile-margin);
+            @include change-value(padding, $productCard-priceHistory__desktop-padding, $productCard-priceHistory__mobile-padding);
+            @include change-value(font-family, $productCard-priceHistory__desktop-fontFamily, $productCard-priceHistory__mobile-fontFamily);
+            @include change-value(font-size, $productCard-priceHistory__desktop-fontSize, $productCard-priceHistory__mobile-fontSize);
+            @include change-value(line-height, $productCard-priceHistory__desktop-lineHeight, $productCard-priceHistory__mobile-lineHeight);
+            @include change-value(font-weight, $productCard-priceHistory__desktop-fontWeight, $productCard-priceHistory__mobile-fontWeight);
+            @include change-value(font-weight, $productCard-priceHistory__desktop-textAlign, $productCard-priceHistory__mobile-textAlign);
+            @include change-value(color, $productCard-priceHistory__desktop-color, $productCard-priceHistory__mobile-color);
+        }
+    }
+}
+

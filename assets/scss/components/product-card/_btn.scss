@@ -1,0 +1,13 @@
+.ProductCard-btn {
+    @include change-value(margin, $product-card__mobile-btn-margin, none);
+    @include change-value(padding, $product-card__mobile-btn-padding, none);
+    width: 100%;
+    z-index: 1;
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-btn {
+        @include change-value(margin, $product-card__desktop-btn-margin, $product-card__mobile-btn-margin);
+        @include change-value(padding, $product-card__desktop-btn-padding, $product-card__mobile-btn-padding);
+    }
+}

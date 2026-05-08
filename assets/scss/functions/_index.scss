@@ -1,0 +1,198 @@
+// Capitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function capitalize($string) {
+    @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-ucfirst($string) {
+    @return capitalize($string);
+}
+
+
+// Uncapitalize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function uncapitalize($string) {
+    @return to-lower-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// Alias
+@function str-lcfirst($string) {
+    @return uncapitalize($string);
+}
+
+
+// Capitalize each word in string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function str-ucwords($string) {
+    $progress: $string;
+    $result: "";
+
+    $running: true;
+
+    @while $running {
+        $index: str-index($progress, " ");
+        @if $index {
+            $result: $result + capitalize(str-slice($progress, 1, $index));
+            $progress: str-slice($progress, ($index + 1));
+        } @else {
+            $running: false;
+        }
+    }
+
+    @return capitalize($result) + capitalize($progress);
+}
+
+
+// Return whether `$value` is contained in `$list`
+// --------------------------------------------------------------------------------
+// @param [list] $list
+// @param [$value] $value
+// --------------------------------------------------------------------------------
+// @return [boolean]
+
+@function contain($list, $value) {
+    @return not not index($list, $value);
+}
+
+
+// Camelize string
+// --------------------------------------------------------------------------------
+// @param [string] $string
+// --------------------------------------------------------------------------------
+// @return [string]
+
+@function camelize($string) {
+    $progress: $string;
+    $result: "";
+    $exclude: " ", "-", "–", "—", "_", ",", ";", ":", ".";
+
+    @while str-length($progress) > 0 {
+        $char: str-slice($progress, 1, 1);
+
+        @if contain($exclude, $char) {
+            $progress: capitalize(str-slice($progress, 2, 2)) + str-slice($progress, 3);
+        } @else {
+            $result: $result + $char;
+            $progress: str-slice($progress, 2);
+        }
+    }
+
+    @return $result;
+}
+
+@function is-number($value) {
+    @return type-of($value) == 'number';
+}
+
+@function is-time($value) {
+    @return is-number($value) and index('ms' 's', unit($value)) != null;
+}
+
+@function is-duration($value) {
+    @return is-time($value);
+}
+
+@function is-angle($value) {
+    @return is-number($value) and index('deg' 'rad' 'grad' 'turn', unit($value)) != null;
+}
+
+@function is-frequency($value) {
+    @return is-number($value) and index('Hz' 'kHz', unit($value)) != null;
+}
+
+@function is-integer($value) {
+    @return is-number($value) and round($value) == $value;
+}
+
+@function is-relative-length($value) {
+    @return is-number($value) and index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax', unit($value)) != null;
+}
+
+@function is-absolute-length($value) {
+    @return is-number($value) and index('cm' 'mm' 'in' 'px' 'pt' 'pc', unit($value)) != null;
+}
+
+@function is-percentage($value) {
+    @return is-number($value) and unit($value) == '%';
+}
+
+@function is-length($value) {
+    @return is-relative-length($value) or is-absolute-length($value);
+}
+
+@function is-resolution($value) {
+    @return is-number($value) and index('dpi' 'dpcm' 'dppx', unit($value)) != null;
+}
+
+@function is-position($value) {
+    @return is-length($value) or is-percentage($value) or index('top' 'right' 'bottom' 'left' 'center', $value) != null;
+}
+
+@function to-rem($value) {
+    @return (0.1 * $value) + rem;
+}
+
+@function can-not-be-converted-to-rem($value, $list: ()) {
+    @return index($list, $value) or unitless($value) == false or (is-number($value) and is-integer($value) == false);
+}
+
+@function isCustomProperty($value){
+    @return (is-number($value) == false and is-integer($value) == false and is-percentage($value) == false) and str-index($value, 'var(--');
+}
+
+// Map Extend
+// jQuery-style extend function for when `map-merge()` isn't enough. Use when
+// we need to merge more than two maps and/or need a merge to be recursive.
+// @param $map
+//   @type first map
+// @param $maps
+//   @type list of maps
+// @param $deep
+//   @type boolean
+//   @default false
+//   @desc Whether or not to enable recursive mode.
+// @return merged map
+@function map-extend($map, $maps.../*, $deep */) {
+    $last: nth($maps, -1);
+    $deep: $last == true;
+    $max: if($deep, length($maps) - 1, length($maps));
+
+    // Loop through all maps in $maps...
+    @for $i from 1 through $max {
+        // Store current map
+        $current: nth($maps, $i);
+
+        // If not in deep mode, simply merge current map with map
+        @if not $deep {
+            $map: map-merge($map, $current);
+        } @else {
+            // If in deep mode, loop through all tuples in current map
+            @each $key, $value in $current {
+
+                // If value is a nested map and same key from map is a nested map as well
+                @if type-of($value) == "map" and type-of(map-get($map, $key)) == "map" {
+                    // Recursive extend
+                    $value: map-extend(map-get($map, $key), $value, true);
+                }
+
+                // Merge current tuple with map
+                $map: map-merge($map, ($key: $value));
+            }
+        }
+    }
+
+    @return $map;
+}

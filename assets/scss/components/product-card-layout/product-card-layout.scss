@@ -1,0 +1,47 @@
+@import "variables";
+
+@layer components.eshop {
+.ProductCardLayout {
+    display: grid;
+
+    // set store variables
+    $prevGap: null;
+    $prevColumns: null;
+    $prevSpacer: null;
+
+    // foreach $product-card-layout
+    @each $breakpoint, $columns, $gap, $spacer in $product-card-layout {
+        // add breakpoint
+        @include media-breakpoint-up($breakpoint) {
+
+            // if prev column is not same
+            @if ($prevColumns != $columns) {
+                grid-template-columns: $columns;
+            }
+
+            // if prev gap is not same
+            @if ($prevGap != $gap) {
+                gap: $gap;
+            }
+
+            // if prev spacer is not same
+            @if ($prevSpacer != $spacer) {
+                & + & {
+                    margin-top: $spacer;
+                }
+            }
+        }
+        // store for next cycle
+        $prevGap: $gap;
+        $prevColumns: $columns;
+        $prevSpacer: $spacer;
+    }
+}
+
+// extra small breakpoint
+@media (max-width: 399px) {
+    .ProductCardLayout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+}

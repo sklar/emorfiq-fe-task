@@ -1,0 +1,52 @@
+.ProductCardLoyaltyPrice {
+    @include change-value(margin, $product-card__mobile-loyalty-price-margin, none);
+    @include change-value(padding, $product-card__mobile-loyalty-price-padding, none);
+}
+
+.ProductCardLoyaltyPrice-title {
+    @include change-value(margin, $product-card__mobile-loyalty-price-title-margin, none);
+    @include change-value(padding, $product-card__mobile-loyalty-price-title-padding, none);
+    @include change-value(font-family, $product-card__mobile-loyalty-price-title-font-family, none);
+    @include change-value(font-size, $product-card__mobile-loyalty-price-title-font-size, none);
+    @include change-value(line-height, $product-card__mobile-loyalty-price-title-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-loyalty-price-title-font-weight, none);
+    @include change-value(color, $product-card__mobile-loyalty-price-title-color, none);
+}
+
+.ProductCardLoyaltyPrice-value {
+    @include change-value(margin, $product-card__mobile-loyalty-price-value-margin, none);
+    @include change-value(padding, $product-card__mobile-loyalty-price-value-padding, none);
+    @include change-value(font-family, $product-card__mobile-loyalty-price-value-font-family, none);
+    @include change-value(font-size, $product-card__mobile-loyalty-price-value-font-size, none);
+    @include change-value(line-height, $product-card__mobile-loyalty-price-value-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-loyalty-price-value-font-weight, none);
+    @include change-value(color, $product-card__mobile-loyalty-price-value-color, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCardLoyaltyPrice {
+        @include change-value(margin, $product-card__desktop-loyalty-price-margin, $product-card__mobile-loyalty-price-margin);
+        @include change-value(padding, $product-card__desktop-loyalty-price-padding, $product-card__mobile-loyalty-price-padding);
+    }
+
+    .ProductCardLoyaltyPrice-title {
+        @include change-value(margin, $product-card__desktop-loyalty-price-title-margin, $product-card__mobile-loyalty-price-title-margin);
+        @include change-value(padding, $product-card__desktop-loyalty-price-title-padding, $product-card__mobile-loyalty-price-title-padding);
+        @include change-value(font-family, $product-card__desktop-loyalty-price-title-font-family, $product-card__mobile-loyalty-price-title-font-family);
+        @include change-value(font-size, $product-card__desktop-loyalty-price-title-font-size, $product-card__mobile-loyalty-price-title-font-size);
+        @include change-value(line-height, $product-card__desktop-loyalty-price-title-line-height, $product-card__mobile-loyalty-price-title-line-height);
+        @include change-value(font-weight, $product-card__desktop-loyalty-price-title-font-weight, $product-card__mobile-loyalty-price-title-font-weight);
+        @include change-value(color, $product-card__desktop-loyalty-price-title-color, $product-card__mobile-loyalty-price-title-color);
+    }
+
+    .ProductCardLoyaltyPrice-value {
+        @include change-value(margin, $product-card__desktop-loyalty-price-value-margin, $product-card__mobile-loyalty-price-value-margin);
+        @include change-value(padding, $product-card__desktop-loyalty-price-value-padding, $product-card__mobile-loyalty-price-value-padding);
+        @include change-value(font-family, $product-card__desktop-loyalty-price-value-font-family, $product-card__mobile-loyalty-price-value-font-family);
+        @include change-value(font-size, $product-card__desktop-loyalty-price-value-font-size, $product-card__mobile-loyalty-price-value-font-size);
+        @include change-value(line-height, $product-card__desktop-loyalty-price-value-line-height, $product-card__mobile-loyalty-price-value-line-height);
+        @include change-value(font-weight, $product-card__desktop-loyalty-price-value-font-weight, $product-card__mobile-loyalty-price-value-font-weight);
+        @include change-value(color, $product-card__desktop-loyalty-price-value-color, $product-card__mobile-loyalty-price-value-color);
+    }
+}
+

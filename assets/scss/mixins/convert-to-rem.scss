@@ -1,0 +1,8 @@
+// Convert px to rem
+@mixin convert-to-rem($attibute, $value, $skipped: ()) {
+    @if (isCustomProperty($value) or can-not-be-converted-to-rem($value, $skipped)) {
+        #{$attibute}: $value;
+    } @else {
+        #{$attibute}: to-rem($value);
+    }
+}

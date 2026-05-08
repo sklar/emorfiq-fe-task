@@ -1,0 +1,43 @@
+.Btn {
+    --btn-border-width: #{$ui-button-border-width};
+
+    // Reset browser <button> styles.
+    position: relative;
+
+    // Make anchors render like buttons.
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+
+    // Sizing.
+    min-width: $ui-button-min-width;
+    border: var(--btn-border-width, 0) solid $ui-button-border-color;
+    line-height: calc(var(--btn-height) - (var(--btn-border-width, 0) * 2));
+    border-radius: $ui-button-border-radius;
+
+    // Font
+    @include change-value(font-family, $ui-button-font-family, none);
+
+    // Explicitly set the default overflow to `visible`. It is already set
+    // on most browsers except on IE11 where it defaults to `hidden`.
+    overflow: visible;
+
+    &.Btn--disabled,
+    &[disabled] {
+        &, &:hover, &:focus-visible {
+            cursor: $ui-button-disabled-cursor;
+            @include change-value(opacity, $ui-button-disabled-opacity, none);
+        }
+
+        &.is-loading {
+            cursor: wait;
+        }
+    }
+
+    .Icon {
+        width: var(--btn-icon-size);
+        height: auto;
+    }
+}

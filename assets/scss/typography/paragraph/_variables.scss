@@ -1,0 +1,19 @@
+// Common
+$ui-paragraph-breakpoint: $ui-global-breakpoint !default;
+$ui-paragraph-reset-last: true !default;
+
+// Mobile
+$ui-paragraph__mobile-margin: 0 0 22px !default;
+$ui-paragraph__mobile-padding: none !default;
+$ui-paragraph__mobile-font-family: none !default;
+$ui-paragraph__mobile-font-size: none !default;
+$ui-paragraph__mobile-font-weight: none !default;
+$ui-paragraph__mobile-line-height: none !default;
+
+// Desktop
+$ui-paragraph__desktop-margin: $ui-paragraph__mobile-margin !default;
+$ui-paragraph__desktop-padding: $ui-paragraph__mobile-padding !default;
+$ui-paragraph__desktop-font-family: $ui-paragraph__mobile-font-family !default;
+$ui-paragraph__desktop-font-size: $ui-paragraph__mobile-font-size !default;
+$ui-paragraph__desktop-font-weight: $ui-paragraph__mobile-font-weight !default;
+$ui-paragraph__desktop-line-height: $ui-paragraph__mobile-line-height !default;

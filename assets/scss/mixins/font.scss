@@ -1,0 +1,18 @@
+$font-size-skipped-list: (0, initial, inherit) !default;
+$line-height-skipped-list: (1, initial, inherit, normal) !default;
+
+// Value passed should be rem size without unit
+@mixin font-size($sizeValue) {
+    @include convert-to-rem(font-size, $sizeValue, $font-size-skipped-list);
+}
+
+// Adds line-height
+@mixin line-height($heightValue) {
+    line-height: $heightValue;
+}
+
+// Shortcut for font-size & line-height mixins
+@mixin font($sizeValue, $heightValue) {
+    @include font-size($sizeValue);
+    @include line-height($heightValue);
+}

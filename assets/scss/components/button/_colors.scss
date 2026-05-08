@@ -1,0 +1,43 @@
+.Btn--style1.Btn--primary {
+    @include button-variant(
+            $ui-button-primary-style1-color,
+            $ui-button-primary-style1-background-color,
+            $ui-button-primary-style1-border-color,
+            $ui-button-primary-style1-hover-color,
+            $ui-button-primary-style1-hover-background-color,
+            $ui-button-primary-style1-hover-border-color,
+    );
+}
+
+.Btn--style1.Btn--secondary {
+    @include button-variant(
+            $ui-button-secondary-style1-color,
+            $ui-button-secondary-style1-background-color,
+            $ui-button-secondary-style1-border-color,
+            $ui-button-secondary-style1-hover-color,
+            $ui-button-secondary-style1-hover-background-color,
+            $ui-button-secondary-style1-hover-border-color,
+    );
+}
+
+.Btn--style2.Btn--primary {
+    @include button-variant(
+            $ui-button-primary-style2-color,
+            $ui-button-primary-style2-background-color,
+            $ui-button-primary-style2-border-color,
+            $ui-button-primary-style2-hover-color,
+            $ui-button-primary-style2-hover-background-color,
+            $ui-button-primary-style2-hover-border-color,
+    );
+}
+
+.Btn--style2.Btn--secondary {
+    @include button-variant(
+            $ui-button-secondary-style2-color,
+            $ui-button-secondary-style2-background-color,
+            $ui-button-secondary-style2-border-color,
+            $ui-button-secondary-style2-hover-color,
+            $ui-button-secondary-style2-hover-background-color,
+            $ui-button-secondary-style2-hover-border-color,
+    );
+}

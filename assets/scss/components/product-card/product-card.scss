@@ -1,0 +1,56 @@
+@import "variables";
+
+@layer components.eshop {
+.ProductCard {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    isolation: isolate;
+    @include change-value(margin, $product-card__mobile-margin, none);
+    @include change-value(padding, $product-card__mobile-padding, none);
+    @include change-value(background-color, $product-card-background-color, none);
+    @include change-value(border-radius, $product-card__mobile-border-radius, none);
+
+    @if ($product-card__mobile-border-width != none) {
+        border-width: $product-card__mobile-border-width;
+        border-color: $product-card__mobile-border-color;
+        border-style: solid;
+
+        &:hover, &:focus {
+            border-color: $product-card__mobile-border-hover-color;
+        }
+    }
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard {
+        @include change-value(margin, $product-card__desktop-margin, $product-card__mobile-margin);
+        @include change-value(padding, $product-card__desktop-padding, $product-card__mobile-padding);
+        @include change-value(border-radius, $product-card__desktop-border-radius, $product-card__mobile-border-radius);
+        @include change-value(border-width, $product-card__desktop-border-width, $product-card__mobile-border-width);
+        @include change-value(border-color, $product-card__desktop-border-color, $product-card__mobile-border-color);
+
+        &:hover, &:focus {
+            @include change-value(border-color, $product-card__desktop-border-hover-color, $product-card__mobile-border-hover-color);
+        }
+    }
+}
+
+@import "link";
+@import "header";
+@import "footer";
+@import "body";
+@import "badges";
+@import "like";
+@import "btn";
+@import "image";
+@import "imageWrapper";
+@import "price";
+@import "priceHistory";
+@import "loyalty-price";
+@import "stock";
+@import "title";
+@import "code";
+@import "quantity";
+}

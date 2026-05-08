@@ -1,0 +1,27 @@
+.ProductCard-header {
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include change-value(margin, $product-card__mobile-header-margin, none);
+    @include change-value(padding, $product-card__mobile-header-padding, none);
+    @include change-value(height, $product-card__mobile-header-height, none);
+    width: 100%;
+    @include change-value(background-color, $product-card-header-background-color, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-header {
+        @include change-value(margin, $product-card__desktop-header-margin, none);
+        @include change-value(padding, $product-card__desktop-header-padding, none);
+        @include change-value(height, $product-card__desktop-header-height, none);
+    }
+}
+
+@if ($product-card-hover-image-scale) {
+    .ProductCard-header {
+        overflow: hidden;
+    }
+}

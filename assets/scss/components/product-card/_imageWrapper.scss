@@ -1,0 +1,10 @@
+.ProductCard-imageWrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: 'image' 100% / 100%;
+
+    > img {
+        grid-area: image;
+    }
+}

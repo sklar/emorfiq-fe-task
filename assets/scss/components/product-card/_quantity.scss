@@ -1,0 +1,28 @@
+.ProductCard .QuantityInput {
+    z-index: 1;
+    display: block;
+}
+
+.ProductCard-quantity {
+    @include change-value(min-height, $product-card__mobile-footer-quantity-min-height, none);
+}
+
+// set quantityInput to full width
+@include media-breakpoint-down(breakpoint-prev($product-card-breakpoint)) {
+    .ProductCard {
+        .QuantityInput {
+            @include change-value(max-width, $product-card__mobile-footer-quantity-max-width, none);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .QuantityInput-value,
+        .QuantityInput-btn {
+            width: 33.33%;
+        }
+    }
+
+    .ProductCard-quantity {
+        @include change-value(min-height, $product-card__desktop-footer-quantity-min-height, $product-card__mobile-footer-quantity-min-height);
+    }
+}

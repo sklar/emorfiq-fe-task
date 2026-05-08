@@ -1,0 +1,31 @@
+.ProductCard-title {
+    @include change-value(margin, $product-card__mobile-title-margin, none);
+    @include change-value(padding, $product-card__mobile-title-padding, none);
+    @include change-value(font-family, $product-card__mobile-title-font-family, none);
+    @include change-value(font-size, $product-card__mobile-title-font-size, none);
+    @include change-value(line-height, $product-card__mobile-title-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-title-font-weight, none);
+    @include change-value(color, $product-card__mobile-title-color, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-title {
+        @include change-value(margin, $product-card__desktop-title-margin, $product-card__mobile-title-margin);
+        @include change-value(padding, $product-card__desktop-title-padding, $product-card__mobile-title-padding);
+        @include change-value(font-family, $product-card__desktop-title-font-family, $product-card__mobile-title-font-family);
+        @include change-value(font-size, $product-card__desktop-title-font-size, $product-card__mobile-title-font-size);
+        @include change-value(line-height, $product-card__desktop-title-line-height, $product-card__mobile-title-line-height);
+        @include change-value(font-weight, $product-card__desktop-title-font-weight, $product-card__mobile-title-font-weight);
+        @include change-value(color, $product-card__desktop-title-color, $product-card__mobile-title-color);
+    }
+}
+
+@if ($product-card-hover-title-decoration) {
+    .ProductCard:hover,
+    .ProductCard:focus-visible,
+    .ProductCard:focus-within  {
+        .ProductCard-title {
+            text-decoration: $product-card-hover-title-decoration;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+$link-colors: //$name, $color, $hover-color
+    "gray" $ui-color-gray-300 $ui-color-gray-300,
+!default;
+
+$link-arrow-icon-size: 16px !default;
+$link-arrow-icon-spacer: 4px !default;
+$link-arrow-icon-transform: none !default;
+$link-arrow-icon-active-transform: scaleY(-1) !default;
+$link-arrow-icon-transition: transform !default;
+$link-arrow-font-weight: $ui-fw-bold !default;

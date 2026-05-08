@@ -1,0 +1,17 @@
+$container-hd: 1920px !default;
+$container: 1746px !default;
+$container-xLarge: 1460px !default;
+$container-large: 1160px !default;
+$container-medium: 960px !default;
+$container-small: 860px !default;
+$container-xSmall: 610px !default;
+$container-gutter: $ui-default-spacing !default;
+
+$containers: (
+    hd: $container-hd,
+    xLarge: $container-xLarge,
+    large: $container-large,
+    medium: $container-medium,
+    small: $container-small,
+    xSmall: $container-xSmall,
+) !default;

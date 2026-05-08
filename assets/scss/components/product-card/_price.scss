@@ -1,0 +1,57 @@
+.ProductCard-priceWrapper {
+    @include change-value(margin, $product-card__mobile-price-wrapper-margin, none);
+    @include change-value(padding, $product-card__mobile-price-wrapper-padding, none);
+    @include change-value(height, $product-card__mobile-price-wrapper-height, none);
+    @include change-value(align-self, $product-card__mobile-price-wrapper-align-self, none);
+}
+
+.ProductCard-price {
+    @include change-value(margin, $product-card__mobile-price-margin, none);
+    @include change-value(padding, $product-card__mobile-price-padding, none);
+    @include change-value(font-family, $product-card__mobile-price-font-family, none);
+    @include change-value(font-size, $product-card__mobile-price-font-size, none);
+    @include change-value(line-height, $product-card__mobile-price-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-price-font-weight, none);
+    @include change-value(color, $product-card__mobile-price-color, none);
+}
+
+.ProductCard-priceOld {
+    display: block;
+    @include change-value(margin, $product-card__mobile-price-old-margin, none);
+    @include change-value(padding, $product-card__mobile-price-old-padding, none);
+    @include change-value(font-family, $product-card__mobile-price-old-font-family, none);
+    @include change-value(font-size, $product-card__mobile-price-old-font-size, none);
+    @include change-value(line-height, $product-card__mobile-price-old-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-price-old-font-weight, none);
+    @include change-value(color, $product-card__mobile-price-old-color, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-priceWrapper {
+        @include change-value(margin, $product-card__desktop-price-wrapper-margin, $product-card__mobile-price-wrapper-margin);
+        @include change-value(padding, $product-card__desktop-price-wrapper-padding, $product-card__mobile-price-wrapper-padding);
+        @include change-value(height, $product-card__desktop-price-wrapper-height, $product-card__mobile-price-wrapper-height);
+        @include change-value(align-self, $product-card__desktop-price-wrapper-align-self, $product-card__mobile-price-wrapper-align-self);
+    }
+
+    .ProductCard-price {
+        @include change-value(margin, $product-card__desktop-price-margin, $product-card__mobile-price-margin);
+        @include change-value(padding, $product-card__desktop-price-padding, $product-card__mobile-price-padding);
+        @include change-value(font-family, $product-card__desktop-price-font-family, $product-card__mobile-price-font-family);
+        @include change-value(font-size, $product-card__desktop-price-font-size, $product-card__mobile-price-font-size);
+        @include change-value(line-height, $product-card__desktop-price-line-height, $product-card__mobile-price-line-height);
+        @include change-value(font-weight, $product-card__desktop-price-font-weight, $product-card__mobile-price-font-weight);
+        @include change-value(color, $product-card__desktop-price-color, $product-card__mobile-price-color);
+    }
+
+    .ProductCard-priceOld {
+        @include change-value(margin, $product-card__desktop-price-old-margin, $product-card__mobile-price-old-margin);
+        @include change-value(padding, $product-card__desktop-price-old-padding, $product-card__mobile-price-old-padding);
+        @include change-value(font-family, $product-card__desktop-price-old-font-family, $product-card__mobile-price-old-font-family);
+        @include change-value(font-size, $product-card__desktop-price-old-font-size, $product-card__mobile-price-old-font-size);
+        @include change-value(line-height, $product-card__desktop-price-old-line-height, $product-card__mobile-price-old-line-height);
+        @include change-value(font-weight, $product-card__desktop-price-old-font-weight, $product-card__mobile-price-old-font-weight);
+        @include change-value(color, $product-card__desktop-price-old-color, $product-card__mobile-price-old-color);
+    }
+}
+

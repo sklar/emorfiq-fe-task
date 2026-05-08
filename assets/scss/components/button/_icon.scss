@@ -1,0 +1,17 @@
+/**
+ * Modifier: icon
+ */
+.Btn--icon {
+    display: inline-flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    .Icon {
+        flex-shrink: 0;
+    }
+
+    &-left {
+        flex-flow: row-reverse;
+    }
+}

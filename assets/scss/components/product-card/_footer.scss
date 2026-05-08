@@ -1,0 +1,33 @@
+.ProductCard-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    @include change-value(background-color, $product-card-footer-background-color, none);
+    @include change-value(margin, $product-card__mobile-footer-margin, none);
+    @include change-value(padding, $product-card__mobile-footer-padding, none);
+    @include change-value(height, $product-card__mobile-footer-height, none);
+}
+
+.ProductCard-footerContent {
+    @include change-value(display, $product-card__desktop-footer-content__mobile-display, nones);
+    @include change-value(flex-flow, $product-card__desktop-footer-content__mobile-flex-flow, none);
+    @include change-value(gap, $product-card__desktop-footer-content__mobile-gap, none);
+    @include change-value(place-content, $product-card__desktop-footer-content__mobile-place-content, none);
+    @include change-value(place-items, $product-card__desktop-footer-content__mobile-place-items, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-footer {
+        @include change-value(margin, $product-card__desktop-footer-margin, $product-card__mobile-footer-margin);
+        @include change-value(padding, $product-card__desktop-footer-padding, $product-card__mobile-footer-padding);
+        @include change-value(height, $product-card__desktop-footer-height, $product-card__mobile-footer-height);
+    }
+
+    .ProductCard-footerContent {
+        @include change-value(display, $product-card__desktop-footer-content__desktop-display, $product-card__desktop-footer-content__mobile-display);
+        @include change-value(flex-flow, $product-card__desktop-footer-content__desktop-flex-flow, $product-card__desktop-footer-content__mobile-flex-flow);
+        @include change-value(gap, $product-card__desktop-footer-content__desktop-gap, $product-card__desktop-footer-content__mobile-gap);
+        @include change-value(place-content, $product-card__desktop-footer-content__desktop-place-content, $product-card__desktop-footer-content__mobile-place-content);
+        @include change-value(place-items, $product-card__desktop-footer-content__desktop-place-items, $product-card__desktop-footer-content__mobile-place-items);
+    }
+}

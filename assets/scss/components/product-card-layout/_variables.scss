@@ -1,0 +1,6 @@
+$product-card-layout: (
+    0 repeat(auto-fill, minmax(160px, 1fr)) ($spacer-5 $spacer-2) $spacer-5,
+    md repeat(auto-fill, minmax(200px, 1fr)) ($spacer-5 $spacer-2) $spacer-5,
+    lg repeat(auto-fill, minmax(280px, 1fr)) ($spacer-4 $spacer-2) $spacer-4,
+    xxl repeat(auto-fill, minmax(325px, 1fr)) ($spacer-4 $spacer-4) $spacer-4,
+) !default;

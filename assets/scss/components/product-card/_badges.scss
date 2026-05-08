@@ -1,0 +1,21 @@
+.ProductCard a.Badge {
+    z-index: 1;
+}
+
+// foreach types
+@each $type, $breakpoints in $product-card__badges_positions {
+    // create class
+    .ProductCard-#{$type}Badges {
+        // foreach breakpoints
+        @each $breakpoint, $properties in $breakpoints {
+            // set breakpoint
+            @include media-breakpoint-up($breakpoint) {
+                // foreach properties
+                @each $property, $value in $properties {
+                    // set property
+                    @include change-value($property, $value, none);
+                }
+            }
+        }
+    }
+}

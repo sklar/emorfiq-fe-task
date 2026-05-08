@@ -1,0 +1,82 @@
+@import "variables";
+@import "mixins";
+
+@layer components.ui {
+a,
+.Link {
+    &.is-loading {
+        cursor: wait;
+    }
+}
+
+Button.Link{
+    text-decoration: underline;
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+.Link--reverse {
+    @include link-reverse;
+}
+
+.Link--none {
+    @include link-none;
+}
+
+.Link--withIcon,
+.Link--withArrow {
+    display: inline-flex;
+    align-items: center;
+    gap: $link-arrow-icon-spacer;
+}
+
+// Generate colors
+@each $name, $color, $hover-color in $link-colors {
+    .Link--#{$name} {
+        color: $color;
+
+        &:hover, &:focus {
+            color: $hover-color;
+        }
+    }
+}
+
+.Link--withArrow {
+    @include change-value(font-weight, $link-arrow-font-weight, none);
+
+    .LinkArrow-label {
+        &--open {
+            display: none;
+        }
+
+        &--close {
+            display: inline;
+        }
+    }
+
+    .Icon {
+        width: $link-arrow-icon-size;
+        height: auto;
+        @include change-value(transform, $link-arrow-icon-transform, none);
+        @include transition($link-arrow-icon-transition);
+    }
+
+    &.is-active {
+        .Icon {
+            transform: $link-arrow-icon-active-transform;
+        }
+
+        .LinkArrow-label {
+            &--open {
+                display: inline;
+            }
+
+            &--close {
+                display: none;
+            }
+        }
+    }
+}
+}

@@ -1,0 +1,128 @@
+$ui-button-breakpoint: $ui-global-breakpoint !default;
+
+// =====
+// default
+$ui-button-min-width: 0 !default;
+$ui-button-font-family: none !default;
+$ui-button-border-width: 1px !default;
+$ui-button-border-color: transparent !default;
+$ui-button-border-radius: 5px !default;
+
+// =====
+// Disabled
+$ui-button-disabled-opacity: .5 !default;
+$ui-button-disabled-cursor: $ui-global-disabled-cursor !default;
+
+// #Sizes
+// =====
+// default
+$ui-button__mobile-padding: 0 24px !default;
+$ui-button__mobile-height: 40px !default;
+$ui-button__mobile-icon-size: 24px !default;
+$ui-button__mobile-font-size: var(--fs-400) !default;
+$ui-button__mobile-font-weight: $ui-fw-bolder !default;
+$ui-button__mobile-line-height: none !default;
+$ui-button__mobile-gap: 12px !default;
+
+$ui-button__desktop-padding: $ui-button__mobile-padding !default;
+$ui-button__desktop-height: $ui-button__mobile-height !default;
+$ui-button__desktop-icon-size: $ui-button__mobile-icon-size !default;
+$ui-button__desktop-font-size: var(--fs-500) !default;
+$ui-button__desktop-font-weight: $ui-button__mobile-font-weight !default;
+$ui-button__desktop-line-height: $ui-button__mobile-line-height !default; // height - border
+$ui-button__desktop-gap: $ui-button__mobile-gap !default;
+
+// =====
+// small
+$ui-button__mobile-small-padding: 0 8px !default;
+$ui-button__mobile-small-height: 24px !default;
+$ui-button__mobile-small-icon-size: 16px !default;
+$ui-button__mobile-small-font-size: var(--fs-300) !default;
+$ui-button__mobile-small-font-weight: $ui-fw-bolder !default;
+$ui-button__mobile-small-line-height: none !default; // height - border
+$ui-button__mobile-small-gap: 6px !default;
+
+$ui-button__desktop-small-padding: $ui-button__mobile-small-padding !default;
+$ui-button__desktop-small-height: $ui-button__mobile-small-height !default;
+$ui-button__desktop-small-icon-size: $ui-button__mobile-small-icon-size !default;
+$ui-button__desktop-small-font-size: var(--fs-400) !default;
+$ui-button__desktop-small-font-weight: $ui-button__mobile-small-font-weight !default;
+$ui-button__desktop-small-line-height: $ui-button__mobile-small-line-height !default;
+$ui-button__desktop-small-gap: $ui-button__mobile-small-gap !default;
+
+// =====
+// medium
+$ui-button__mobile-medium-padding: none !default;
+$ui-button__mobile-medium-height: 48px !default;
+$ui-button__mobile-medium-icon-size: none !default;
+$ui-button__mobile-medium-font-size: none !default;
+$ui-button__mobile-medium-font-weight: 700 !default;
+$ui-button__mobile-medium-line-height: none !default; // height - border
+$ui-button__mobile-medium-gap: none !default;
+
+$ui-button__desktop-medium-padding: $ui-button__mobile-medium-padding !default;
+$ui-button__desktop-medium-height: $ui-button__mobile-medium-height !default;
+$ui-button__desktop-medium-icon-size: $ui-button__mobile-medium-icon-size !default;
+$ui-button__desktop-medium-font-size: $ui-button__mobile-medium-font-size !default;
+$ui-button__desktop-medium-font-weight: $ui-button__mobile-medium-font-weight !default;
+$ui-button__desktop-medium-line-height: $ui-button__mobile-medium-line-height !default;
+$ui-button__desktop-medium-gap: $ui-button__mobile-medium-gap !default;
+
+// =====
+// large
+$ui-button__mobile-large-padding: none !default;
+$ui-button__mobile-large-height: 56px !default;
+$ui-button__mobile-large-icon-size: none !default;
+$ui-button__mobile-large-font-size: none !default;
+$ui-button__mobile-large-font-weight: 700 !default;
+$ui-button__mobile-large-line-height: none !default; // height - border
+$ui-button__mobile-large-gap: none !default;
+
+$ui-button__desktop-large-padding: $ui-button__mobile-large-padding !default;
+$ui-button__desktop-large-height: $ui-button__mobile-large-height !default;
+$ui-button__desktop-large-icon-size: $ui-button__mobile-large-icon-size !default;
+$ui-button__desktop-large-font-size: $ui-button__mobile-large-font-size !default;
+$ui-button__desktop-large-font-weight: $ui-button__mobile-large-font-weight !default;
+$ui-button__desktop-large-line-height: $ui-button__mobile-large-line-height !default;
+$ui-button__desktop-large-gap: $ui-button__mobile-large-gap !default;
+
+// #Colors
+// =====
+// Primary style1
+$ui-button-primary-style1-color: $ui-color-primary-inverse !default;
+$ui-button-primary-style1-background-color: $ui-color-primary-500 !default;
+$ui-button-primary-style1-border-color: $ui-color-primary-500 !default;
+// :hover
+$ui-button-primary-style1-hover-color: $ui-button-primary-style1-color !default;
+$ui-button-primary-style1-hover-background-color: $ui-color-primary-600 !default;
+$ui-button-primary-style1-hover-border-color: $ui-color-primary-600 !default;
+
+// =====
+// Primary style2
+$ui-button-primary-style2-color: $ui-color-primary-500 !default;
+$ui-button-primary-style2-background-color: transparent !default;
+$ui-button-primary-style2-border-color: $ui-color-primary-500 !default;
+// :hover
+$ui-button-primary-style2-hover-color: $ui-color-primary-inverse !default;
+$ui-button-primary-style2-hover-background-color: $ui-button-primary-style2-color !default;
+$ui-button-primary-style2-hover-border-color: $ui-button-primary-style2-border-color !default;
+
+// =====
+// Secondary style1
+$ui-button-secondary-style1-color: $ui-color-secondary-inverse !default;
+$ui-button-secondary-style1-background-color: $ui-color-secondary-500 !default;
+$ui-button-secondary-style1-border-color: $ui-color-secondary-500 !default;
+// :hover
+$ui-button-secondary-style1-hover-color: $ui-button-secondary-style1-color !default;
+$ui-button-secondary-style1-hover-background-color: $ui-color-secondary-600 !default;
+$ui-button-secondary-style1-hover-border-color: $ui-color-secondary-600 !default;
+
+// =====
+// Secondary style2
+$ui-button-secondary-style2-color: $ui-color-secondary-500 !default;
+$ui-button-secondary-style2-background-color: transparent !default;
+$ui-button-secondary-style2-border-color: $ui-color-secondary-500 !default;
+// :hover
+$ui-button-secondary-style2-hover-color: $ui-color-secondary-inverse !default;
+$ui-button-secondary-style2-hover-background-color: $ui-button-secondary-style2-color !default;
+$ui-button-secondary-style2-hover-border-color: $ui-button-secondary-style2-border-color !default;

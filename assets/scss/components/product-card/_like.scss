@@ -1,0 +1,21 @@
+.ProductCard .LikeButton {
+    position: absolute;
+    z-index: 1;
+    @include change-value(inset, $product-card__mobile-like-inset, none);
+
+    .Icon {
+        @include change-value(width, $product-card__mobile-like-icon-width, none);
+        @include change-value(height, $product-card__mobile-like-icon-height, none);
+    }
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard .LikeButton {
+        @include change-value(inset, $product-card__desktop-like-inset, $product-card__mobile-like-inset);
+
+        .Icon {
+            @include change-value(width, $product-card__desktop-like-icon-width, none);
+            @include change-value(height, $product-card__desktop-like-icon-height, none);
+        }
+    }
+}

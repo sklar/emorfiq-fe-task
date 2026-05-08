@@ -1,0 +1,60 @@
+//Black to white colors
+$ui-color-white: #FFF !default;
+$ui-color-black-50: #F2F2F2 !default;
+$ui-color-black-100: #E6E6E6 !default;
+$ui-color-black-200: #CCCCCC !default;
+$ui-color-black-300: #B3B3B3 !default;
+$ui-color-black-400: #999999 !default;
+$ui-color-black-500: #808080 !default;
+$ui-color-black-600: #666666 !default;
+$ui-color-black-700: #4D4D4D !default;
+$ui-color-black-800: #333333 !default;
+$ui-color-black-900: #1A1A1A !default;
+$ui-color-black: #000 !default;
+
+//Gray colors
+$ui-color-gray-50: #F8F8F8 !default;
+$ui-color-gray-100: #EDECED !default;
+$ui-color-gray-200: #D2D1D4 !default;
+$ui-color-gray-300: #A6A4A8 !default;
+$ui-color-gray-400: #7A777E !default;
+$ui-color-gray-500: #4D4952 !default;
+$ui-color-gray-600: #322E36 !default;
+$ui-color-gray-700: #292929 !default;
+$ui-color-gray-800: #1F1D21 !default;
+$ui-color-gray-900: #0F0F10 !default;
+
+//Brand colors
+$ui-color-primary-100: #E5F1FC !default;
+$ui-color-primary-200: #BFDDF8 !default;
+$ui-color-primary-300: #7FBBF0 !default;
+$ui-color-primary-400: #4099EA !default;
+$ui-color-primary-500: #0077E2 !default;
+$ui-color-primary-600: #0057D5 !default;
+$ui-color-primary-700: #004788 !default;
+$ui-color-primary-800: #00305A !default;
+$ui-color-primary-900: #002444 !default;
+$ui-color-primary-inverse: $ui-color-white !default;
+
+$ui-color-secondary-100: #FFEEE5 !default;
+$ui-color-secondary-200: #FDDCCC !default;
+$ui-color-secondary-300: #FDCBB3 !default;
+$ui-color-secondary-400: #FBA87F !default;
+$ui-color-secondary-500: #F75200 !default;
+$ui-color-secondary-600: #F33600 !default;
+$ui-color-secondary-700: #943100 !default;
+$ui-color-secondary-800: #632100 !default;
+$ui-color-secondary-900: #311000 !default;
+$ui-color-secondary-inverse: $ui-color-white !default;
+
+//UI colors
+$ui-color-info: #0077E2 !default;
+$ui-color-success: #0EAC5F !default;
+$ui-color-warning: #F75200 !default;
+$ui-color-error: #D81616 !default;
+
+//Other colors
+$ui-color-red: #D81616 !default;
+$ui-color-green: #0EAC5F !default;
+$ui-color-orange: #F75200 !default;
+$ui-color-yellow: #FFCB00 !default;

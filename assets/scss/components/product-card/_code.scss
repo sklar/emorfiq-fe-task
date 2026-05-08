@@ -1,0 +1,21 @@
+.ProductCard-code {
+    @include change-value(margin, $product-card__mobile-code-margin, none);
+    @include change-value(padding, $product-card__mobile-code-padding, none);
+    @include change-value(font-family, $product-card__mobile-code-font-family, none);
+    @include change-value(font-size, $product-card__mobile-code-font-size, none);
+    @include change-value(line-height, $product-card__mobile-code-line-height, none);
+    @include change-value(font-weight, $product-card__mobile-code-font-weight, none);
+    @include change-value(color, $product-card__mobile-code-color, none);
+}
+
+@include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard-code {
+        @include change-value(margin, $product-card__desktop-code-margin, $product-card__mobile-code-margin);
+        @include change-value(padding, $product-card__desktop-code-padding, $product-card__mobile-code-padding);
+        @include change-value(font-family, $product-card__desktop-code-font-family, $product-card__mobile-code-font-family);
+        @include change-value(font-size, $product-card__desktop-code-font-size, $product-card__mobile-code-font-size);
+        @include change-value(line-height, $product-card__desktop-code-line-height, $product-card__mobile-code-line-height);
+        @include change-value(font-weight, $product-card__desktop-code-font-weight, $product-card__mobile-code-font-weight);
+        @include change-value(color, $product-card__desktop-code-color, $product-card__mobile-code-color);
+    }
+}

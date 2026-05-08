@@ -1,0 +1,14 @@
+// generate badge size
+@mixin badgeBreakpoint($breakpoints) {
+    // foreach breakpoints
+    @each $breakpoint, $properties in $breakpoints {
+        // set breakpoint
+        @include media-breakpoint-up($breakpoint) {
+            // foreach properties
+            @each $property, $value in $properties {
+                // set property
+                @include change-value($property, $value, none);
+            }
+        }
+    }
+}
