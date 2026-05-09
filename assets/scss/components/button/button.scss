@@ -2,8 +2,8 @@
 @import "mixins";
 
 @layer components.ui {
-@import "core";
-@import "sizes";
-@import "colors";
-@import "icon";
+    @import "core";
+    @import "sizes";
+    @import "colors";
+    @import "icon";
 }

@@ -7,7 +7,15 @@
 
 @include media-breakpoint-up($product-card-breakpoint) {
     .ProductCard-btn {
-        @include change-value(margin, $product-card__desktop-btn-margin, $product-card__mobile-btn-margin);
-        @include change-value(padding, $product-card__desktop-btn-padding, $product-card__mobile-btn-padding);
+        @include change-value(
+            margin,
+            $product-card__desktop-btn-margin,
+            $product-card__mobile-btn-margin
+        );
+        @include change-value(
+            padding,
+            $product-card__desktop-btn-padding,
+            $product-card__mobile-btn-padding
+        );
     }
 }

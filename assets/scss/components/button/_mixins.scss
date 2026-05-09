@@ -1,4 +1,11 @@
-@mixin button-variant($color, $background-color, $border-color, $hover-color: $color, $hover-background-color: $background-color, $hover-border-color: $border-color) {
+@mixin button-variant(
+    $color,
+    $background-color,
+    $border-color,
+    $hover-color: $color,
+    $hover-background-color: $background-color,
+    $hover-border-color: $border-color
+) {
     color: $color;
     background-color: $background-color;
     border-color: $border-color;

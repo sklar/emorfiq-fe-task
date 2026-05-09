@@ -124,21 +124,22 @@ $product-card__desktop-footer-quantity-min-height: $product-card__mobile-footer-
 $product-card__badges_positions: (
     // name
     primary: (
-        0: (// breakpoint
-            position: absolute,
-            inset: 0 auto auto 0,
-            display: flex,
-            flex-flow: row wrap,
-            gap: 8px,
+            0: (
+                // breakpoint
+                position: absolute,
+                inset: 0 auto auto 0,
+                display: flex,
+                flex-flow: row wrap,
+                gap: 8px,
+            ),
         ),
-    ),
     secondary: (
         0: (
             margin: 0 0 10px 0,
             display: flex,
             flex-flow: row wrap,
             gap: 4px,
-        )
+        ),
     ),
     tertiary: (
         0: (
@@ -148,8 +149,8 @@ $product-card__badges_positions: (
             flex-flow: column,
             align-items: flex-start,
             gap: 4px,
-        )
-    ),
+        ),
+    )
 ) !default;
 
 // Like

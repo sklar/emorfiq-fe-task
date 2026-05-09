@@ -1,36 +1,38 @@
-@import "varaibles";
+@import "variables";
 @import "mixins";
 
 @layer components.eshop {
-.Badge {
-    display: inline-block;
-    color: var(--badgeColor);
-}
-
-a.Badge {
-    @include change-value(text-decoration, $badge-link-text-decoration, nones);
-
-    &, &:hover, &:focus {
-        @include change-value(text-decoration, $badge-link-hover-text-decoration, nones);
+    .Badge {
+        display: inline-block;
         color: var(--badgeColor);
     }
-}
 
-// foreach types
-@each $type, $sizes in $badge-types {
-    // create class
-    .Badge--#{$type} {
-        @each $size, $breakpoints in $sizes {
-            @if ($size == '') {
-                @include badgeBreakpoint($breakpoints);
-            } @else {
-                &.Badge--#{$size} {
+    a.Badge {
+        @include change-value(text-decoration, $badge-link-text-decoration, nones);
+
+        &,
+        &:hover,
+        &:focus {
+            @include change-value(text-decoration, $badge-link-hover-text-decoration, nones);
+            color: var(--badgeColor);
+        }
+    }
+
+    // foreach types
+    @each $type, $sizes in $badge-types {
+        // create class
+        .Badge--#{$type} {
+            @each $size, $breakpoints in $sizes {
+                @if ($size == "") {
                     @include badgeBreakpoint($breakpoints);
+                } @else {
+                    &.Badge--#{$size} {
+                        @include badgeBreakpoint($breakpoints);
+                    }
                 }
             }
         }
     }
-}
 
-@import "btn";
+    @import "btn";
 }

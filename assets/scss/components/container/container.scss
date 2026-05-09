@@ -2,21 +2,21 @@
 @import "mixins";
 
 @layer generic.ui {
-.Container {
-    max-width: $container + ($container-gutter * 2);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $container-gutter;
-    padding-right: $container-gutter;
-}
-
-@each $size, $length in $containers {
-    .Container--#{$size} {
-        max-width: $length + ($container-gutter * 2);
+    .Container {
+        max-width: $container + ($container-gutter * 2);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: $container-gutter;
+        padding-right: $container-gutter;
     }
-}
 
-.Container--fluid {
-    max-width: none;
-}
+    @each $size, $length in $containers {
+        .Container--#{$size} {
+            max-width: $length + ($container-gutter * 2);
+        }
+    }
+
+    .Container--fluid {
+        max-width: none;
+    }
 }

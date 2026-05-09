@@ -1,7 +1,8 @@
 a.Badge--btn {
     @include change-value(text-decoration, $badge-btn-text-decoration, nones);
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
         @include change-value(color, $badge-btn-hover-color, none);
         @include change-value(text-decoration, $badge-btn-hover-text-decoration, nones);
         @include change-value(border-color, $badge-btn-hover-border-color, none);

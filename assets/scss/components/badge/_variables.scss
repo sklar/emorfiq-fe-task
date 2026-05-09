@@ -15,21 +15,23 @@ $badge-btn-hover-color: $ui-color-white !default;
 $badge-btn-hover-text-decoration: $badge-link-hover-text-decoration !default;
 $badge-btn-hover-border-color: none !default;
 $badge-btn-hover-background-color: var(--color, $ui-color-gray-500) !default;
-$badge-btn-hover-box-shadow: 0 5px 10px 0 rgba($ui-color-black, 0.10) !default;
+$badge-btn-hover-box-shadow: 0 5px 10px 0 rgba($ui-color-black, 0.1) !default;
 
 // Badges
 $badge-types: (
-    text: (// name
-        '': (
-            0: (// breakpoint
-                line-height: 1,
-                font-weight: $ui-fw-bold,
-                --badgeColor: var(--color, $ui-color-gray-500),
+    text: (
+        // name
+        "": (
+                0: (
+                    // breakpoint
+                    line-height: 1,
+                    font-weight: $ui-fw-bold,
+                    --badgeColor: var(--color, $ui-color-gray-500),
+                ),
             ),
-        ),
     ),
     rectangle: (
-        '': (
+        "": (
             0: (
                 padding: 0 8px,
                 font-size: var(--fs-300),
@@ -38,11 +40,11 @@ $badge-types: (
                 border-radius: 50px,
                 background-color: var(--background, $ui-color-gray-500),
                 --badgeColor: var(--color, $ui-color-white),
-            )
+            ),
         ),
     ),
     rectangleSide: (
-        '': (
+        "": (
             0: (
                 padding: 0 8px 0 16px,
                 font-size: var(--fs-300),
@@ -55,7 +57,7 @@ $badge-types: (
         ),
     ),
     circle: (
-        '': (
+        "": (
             0: (
                 display: flex,
                 align-items: center,
@@ -97,7 +99,7 @@ $badge-types: (
         ),
     ),
     btn: (
-        '': (
+        "": (
             0: (
                 padding: 6px 15px,
                 font-size: var(--fs-400),

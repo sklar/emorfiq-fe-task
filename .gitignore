@@ -1,0 +1,29 @@
+# Ignored files
+# @see https://git-scm.com/docs/gitignore
+
+# ai
+.claude/*.local.json
+
+# build
+dist
+
+# dependencies
+node_modules
+
+# environment variables
+.env
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# logs
+*-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# vite
+public/hot

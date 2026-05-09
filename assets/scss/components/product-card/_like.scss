@@ -11,7 +11,11 @@
 
 @include media-breakpoint-up($product-card-breakpoint) {
     .ProductCard .LikeButton {
-        @include change-value(inset, $product-card__desktop-like-inset, $product-card__mobile-like-inset);
+        @include change-value(
+            inset,
+            $product-card__desktop-like-inset,
+            $product-card__mobile-like-inset
+        );
 
         .Icon {
             @include change-value(width, $product-card__desktop-like-icon-width, none);

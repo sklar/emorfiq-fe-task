@@ -1,0 +1,17 @@
+# Hybrid local dev: Apache+PHP in container, Vite on host (`pnpm dev`).
+# The browser hits Apache on :8080 and Vite on :5173 directly; the
+# container only needs to read `public/hot` via the volume mount.
+# Render uses the Dockerfile's default stage (`runtime`); compose is
+# dev-only and ignored in deploys.
+
+services:
+  web:
+    build:
+      context: .
+      target: runtime-dev
+    ports:
+      - '8080:80'
+    volumes:
+      - ./index.php:/var/www/html/index.php
+      - ./templates:/var/www/html/templates
+      - ./public:/var/www/html/public

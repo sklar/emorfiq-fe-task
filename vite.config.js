@@ -1,26 +1,22 @@
-// vite.config.js
-import {defineConfig} from "vite";
+import { defineConfig } from 'vite';
+import { hotFile } from './vite-plugin-hot-file.js';
 
 export default defineConfig({
-    server: {
-        port: 5173,
-        hmr: {
-            port: 5173,
-        }
+    plugins: [hotFile()],
+    css: {
+        // LightningCSS replaces the default PostCSS pipeline + esbuild minifier:
+        // one Rust pass for autoprefixing (driven by .browserslistrc) plus
+        // modern-syntax targeting/lowering. Faster, smaller output.
+        transformer: 'lightningcss',
     },
     build: {
-        polyfillModulePreload: false,
-        manifest: false,
-        emptyOutDir: true,
+        // manifest.json is required by templates/vite.php to resolve hashed
+        // asset filenames in production (when public/hot is absent).
+        manifest: true,
+        cssMinify: 'lightningcss',
         rollupOptions: {
-            input: './assets/js/index.js',
-            output: {
-                dir: './dist/',
-                entryFileNames: 'app.js',
-                assetFileNames: 'app.css',
-                chunkFileNames: "chunk.js",
-                manualChunks: undefined,
-            }
+            // SCSS is the direct entry — there is no JS in this project.
+            input: './assets/scss/index.scss',
         },
     },
-})
+});

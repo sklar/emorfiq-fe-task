@@ -24,7 +24,7 @@ $spacer-6: 60px !default;
 $spacer-7: 90px !default;
 
 $spacers: (
-    'none': 0,
+    "none": 0,
     0: $spacer-0,
     1: $spacer-1,
     2: $spacer-2,
@@ -45,14 +45,13 @@ $projectSpacers--negative: () !default;
 
 // Display helpers
 $h-display:
-    'none' 'none',
-    'inline' inline,
-    'inlineBlock' inline-block,
-    'block' block,
-    'table' table,
-    'flex' flex,
-    'inlineFlex' inline-flex,
-!default;
+    "none" "none",
+    "inline" inline,
+    "inlineBlock" inline-block,
+    "block" block,
+    "table" table,
+    "flex" flex,
+    "inlineFlex" inline-flex !default;
 
 // Position helpers
 $h-positions: relative, absolute !default;
@@ -69,12 +68,13 @@ $ui-default-spacing: $spacer-3 !default;
 
 // Font Families
 $ui-ff-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !default;
-$ui-ff-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$ui-ff-mono:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $ui-ff-base: var(--ff-base), $ui-ff-sans !default;
 $ui-ff-display: var(--ff-display), $ui-ff-sans !default;
 
-$ui-global-ff-base: 'Montserrat' !default;
-$ui-global-ff-display: 'Ubuntu' !default;
+$ui-global-ff-base: "Montserrat" !default;
+$ui-global-ff-display: "Ubuntu" !default;
 
 // Fonts-weight
 $ui-fw-bold: 500 !default;
@@ -84,18 +84,21 @@ $ui-fw-bolder: 600 !default;
 // generate css custom properties
 // --fs-500 etc
 $ui-global-fs: () !default;
-$ui-fs: map-extend((
-    2600: 5.6rem,
-    2200: 4.8rem,
-    1300: 3rem,
-    1000: 2.4rem,
-    800: 2rem,
-    700: 1.8rem,
-    600: 1.6rem,
-    500: 1.4rem,
-    400: 1.2rem,
-    300: 1rem,
-), $ui-global-fs) !default;
+$ui-fs: map-extend(
+    (
+        2600: 5.6rem,
+        2200: 4.8rem,
+        1300: 3rem,
+        1000: 2.4rem,
+        800: 2rem,
+        700: 1.8rem,
+        600: 1.6rem,
+        500: 1.4rem,
+        400: 1.2rem,
+        300: 1rem,
+    ),
+    $ui-global-fs
+) !default;
 
 // Globals
 // =====

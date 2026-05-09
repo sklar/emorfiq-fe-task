@@ -23,6 +23,10 @@
     }
 
     .ProductCard-quantity {
-        @include change-value(min-height, $product-card__desktop-footer-quantity-min-height, $product-card__mobile-footer-quantity-min-height);
+        @include change-value(
+            min-height,
+            $product-card__desktop-footer-quantity-min-height,
+            $product-card__mobile-footer-quantity-min-height
+        );
     }
 }

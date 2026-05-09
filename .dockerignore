@@ -1,0 +1,42 @@
+# Files excluded from the Docker build context
+# @see https://docs.docker.com/build/concepts/context/#dockerignore-files
+
+# ai
+.claude
+
+# build artefacts (regenerated in stage 1)
+dist
+
+# dependencies (regenerated in stage 1)
+node_modules
+
+# design / docs (reference only)
+*.md
+resources
+
+# environment variables
+.env
+
+# git
+.git
+.gitignore
+
+# host-only config (not consumed by the build)
+.dockerignore
+.editorconfig
+.nvmrc
+.oxfmtrc.json
+docker-compose.yml
+
+# IDE
+.vscode
+
+# logs
+*-debug.log*
+
+# OS
+**/.DS_Store
+Thumbs.db
+
+# vite
+public/hot

@@ -1,5 +1,5 @@
 // Sets headings custom properties
-@mixin headings($headings){
+@mixin headings($headings) {
     // Create headings custom properties
     @each $breakpoint, $sizes in $headings {
         // foreach breakpoints
@@ -11,7 +11,7 @@
                     // foreach properties
                     @each $property, $value in $values {
                         // if value is not null
-                        @if($value) {
+                        @if ($value) {
                             --heading-#{$property}: #{$value};
                         }
                     }

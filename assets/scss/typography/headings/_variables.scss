@@ -1,6 +1,6 @@
 $ui-headings: (
     null: (
-        1:(
+        1: (
             m: 0,
             p: null,
             fs: 2.6rem,
@@ -8,7 +8,7 @@ $ui-headings: (
             ff: $ui-ff-display,
             fw: 700,
         ),
-        2:(
+        2: (
             m: 0,
             p: null,
             fs: 2.2rem,
@@ -16,7 +16,7 @@ $ui-headings: (
             ff: $ui-ff-display,
             fw: 700,
         ),
-        3:(
+        3: (
             m: 0,
             p: null,
             fs: 1.6rem,
@@ -24,7 +24,7 @@ $ui-headings: (
             ff: $ui-ff-display,
             fw: 700,
         ),
-        4:(
+        4: (
             m: 0,
             p: null,
             fs: 1.4rem,
@@ -32,7 +32,7 @@ $ui-headings: (
             ff: $ui-ff-display,
             fw: 700,
         ),
-        5:(
+        5: (
             m: 0,
             p: null,
             fs: 1.4rem,
@@ -42,20 +42,20 @@ $ui-headings: (
         ),
     ),
     $ui-global-breakpoint: (
-        1:(
+        1: (
             fs: 3rem,
         ),
-        2:(
+        2: (
             fs: 2.4rem,
         ),
-        3:(
+        3: (
             fs: 1.8rem,
         ),
-        4:(
+        4: (
             fs: 1.6rem,
         ),
-        5:(
+        5: (
             fs: 1.6rem,
         ),
-    )
+    ),
 ) !default;

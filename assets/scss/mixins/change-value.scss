@@ -4,9 +4,9 @@
 
 @mixin change-value($attribute, $value, $default, $important: false) {
     @if ($value != $default) {
-        @if ($attribute == 'font-size') {
+        @if ($attribute == "font-size") {
             @include font-size($value);
-        } @else if ($attribute == 'line-height') {
+        } @else if ($attribute == "line-height") {
             @include line-height($value);
         } @else {
             @if ($important) {
